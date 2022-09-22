@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+body{
+height: 100%;
+padding: 2em;
+background-color: rgb(30, 9, 9);
+}
+
+#playAudio {
+    position: absolute;
+    bottom: 43px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background: url(/images/music.png) no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.main-Container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* game area artwork */
+#game-Container {
+    position: relative;
+width: 60em;
+height: 40em;
+overflow:hidden;
+object-fit: contain;
+background: url(/images/background_cafe.png) no-repeat;
+}
+
+#title {
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 201px;
+    width: 600px;
+    height: 500px;
+    background: url(/images/title.png) no-repeat;
+    z-index: 50;
+}
+
+/* start button*/
+#start {
+    position: absolute;
+    top: 458px;
+    left: 136px;
+    color: antiquewhite;
+    font-family: 'Delius', cursive;
+    font-size: 50px;
+    z-index: 103;
+    opacity: 1;
+    animation: fade 1.5s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes fade {
+  from { opacity:0.4 }
+  }
+
+/* next button*/
+#next {
+    position: absolute;
+    display: block;
+    top: 278px;
+    border-radius: 50%;
+border: none;
+    right: 83px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    background: url(/images/button.png) no-repeat;
+    background-size: contain;
+    animation: fade 1s infinite alternate;
+    cursor: pointer;
+}
+@keyframes next {
+    from { opacity:0.4 }
+    }
+
+#teaCard {
+    position: absolute;
+    display: block;
+    top: -18px;
+    left: 50px;
+    width: 860px;
+    height: 100%;
+    background: url(/images/menu-card.png) no-repeat;
+    background-size: contain;
+}
+
+#teaLeaves {
+    position: relative;
+    top: 97px;
+    left: 123px;
+    width: 130px;
+    height: 23%;
+    background: url(/images/tealeaf1.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+#teaLeaves:hover {
+    background: url(/images/tealeaf1hover.png) no-repeat;
+    background-size: contain;
+}
+
+#teaLeaves2 {
+    position: absolute;
+    bottom: 353px;
+    left: 285px;
+    width: 130px;
+    height: 22%;
+    background: url(/images/tealeaf1.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+#teaLeaves2:hover {
+    background: url(/images/tealeaf2hover.png) no-repeat;
+    background-size: contain;
+}
+
+#teaLeaves3 {
+    position: absolute;
+    bottom: 396px;
+    left: 452px;
+    width: 130px;
+    height: 22%;
+    background: url(/images/tealeaf1.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+#teaLeaves3:hover {
+    background: url(/images/tealeafwhite.png) no-repeat;
+    background-size: contain;
+}
+#teaLeaves4 {
+    position: absolute;
+    bottom: 345px;
+    left: 612px;
+    width: 130px;
+    height: 23%;
+    background: url(/images/tealeaf1.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+#teaLeaves4:hover {
+    background: url(/images/tealeafherbal.png) no-repeat;
+    background-size: contain;
+}
+
+#sugar{
+    position: absolute;
+    width: 71px;
+    height: 27%;
+    bottom: 174px;
+    left: 190px;
+    background: url(/images/sugar.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+#sugar:hover {
+    background: url(/images/outofstock.png) no-repeat;
+    background-size: contain;
+    width: 100px;
+    left: 175px;
+    bottom: 158px;
+    height: 32%;
+    opacity: 1;
+}
+
+#honey{
+    position: absolute;
+    bottom: 150px;
+    left: 383px;
+    width: 62px;
+    height: 35%;
+    background: url(/images/honey.png) no-repeat;
+    background-size: contain;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#honey:hover {
+    background: url(/images/outofstock.png) no-repeat;
+    background-size: contain;
+    width: 100px;
+    left: 364px;
+    opacity: 1;
+}
+
+#milk{
+    position: absolute;
+    bottom: 170px;
+    left: 556px;
+    width: 74px;
+    height: 28%;
+    background: url(/images/milk.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+#milk:hover {
+    background: url(/images/outofstock.png) no-repeat;
+    background-size: contain;
+    width: 100px;
+    bottom: 148px;
+    height: 35%;
+    left: 543px;
+    opacity: 1;
+}
+
+
+#selected {
+    position: absolute;
+    display: flex;
+    bottom: 165px;
+    left: 257px;
+    z-index: 10;
+    height: 38px;
+    width: 350px;
+    color: saddlebrown;
+    background-color: #ffffff2e;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.order {
+    position: absolute;
+    bottom: 90px;
+    left: 355px;
+    width: 135px;
+    height: 64px;
+    border: none;
+    background: url(/images/order.png) no-repeat;
+    background-size: contain;
+}
+
+.order:hover {
+    background-color: #6b310c;
+    border-radius: 40px;
+    opacity: 0.8;
+}
+
+.flexFont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.difFont {
+    font-family: 'Delius', cursive;
+    font-size: 25px;
+}
+
+/* textbox */
+#conversationBox {
+    display: none;
+    position: absolute;
+       top: 240px;
+       padding-left: 8px;
+       z-index: 20;
+}
+
+#conversationText {
+    font-family: 'Delius', cursive;
+    font-size: 31px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    left: 89px;
+    top: 64px;
+    width: 790px;
+    z-index: 30;
+    color: #6b310c;
+    white-space: pre-wrap;
+}
+
+#conversationText1 {
+    font-family: 'Delius', cursive;
+    font-size: 31px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    left: 89px;
+    top: 155px;
+    width: 790px;
+    z-index: 30;
+    color: #6b310c;
+    cursor: pointer;
+}
+
+#conversationText1:hover {
+    color: #a17c65;
+}
+
+.lower {
+    top: 301px !important;
+}
+
+#conversationText2 {
+    font-family: 'Delius', cursive;
+    font-size: 31px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    left: 89px;
+    top: 190px;
+    width: 790px;
+    z-index: 30;
+    color: #6b310c;
+    cursor: pointer;
+}
+
+#conversationText2:hover {
+    color: #a17c65;
+}
+
+/* .lower2 {
+    top: 190px !important;
+} */
+
+#conversationText3 {
+    font-family: 'Delius', cursive;
+    font-size: 31px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    left: 89px;
+    top: 225px;
+    width: 790px;
+    z-index: 30;
+    color: #6b310c;
+    cursor: pointer;
+}
+
+#conversationText3:hover {
+    color: #a17c65;
+}
+
+.conversationBoxBackground {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(49 0 0 / 60%);
+}
+
+.conversationBoxImg {
+    position: relative;
+    bottom: 350px;
+    width: 950px;
+    height: 400px;
+    background: url(/images/text_container.png) no-repeat;
+}
+    
+.emoticon{
+    position: relative;
+    bottom: 228px;
+    left: 20px;
+    height: 350px;
+    width: 350px;
+    background: url(/images/happy.png) no-repeat;
+}
+
+/* mainCharacter */
+.gameMushroom {
+    display: none;
+    position: absolute;
+    height: 500px;
+    width: 700px;
+    top: 573px;
+    left: 160px;
+    background: url(/images/big_mushroom.png) no-repeat;
+}
+
+#teaMush {
+    display: none;
+    position: absolute;
+    height: 500px;
+    width: 700px;
+    top: 100px;
+    right: -750px;
+    background: url(/images/mushoomTea.png) no-repeat;
+}
+
+.imgContain {
+    background-size: contain;
+    }
+
+    .gifBg {
+        display: none;
+        position: relative;
+    height: 40em;
+    top: -115px;
+    overflow: hidden;
+    object-fit: contain;
+    }
+
+    .game-Counter {
+        position: relative;
+    bottom: -580px;
+        height: 7em;
+        background: url(/images/counter.png) no-repeat;
+        z-index: 10;
+    }
+
+    #makingBlackTea {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/blackTeaCard.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingBlackTea2 {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/wiatingBlackTea.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingGreenTea {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/greenTeaCard.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingGreenTea2 {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/waitingGreenTea.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingHerbalTea {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/herbalTeaCard.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingHerbalTea2 {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/waitingHerbalTea.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingWhiteTea {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/herbalTeaCard.gif) no-repeat;
+        background-size: contain;
+    }
+
+    #makingWhiteTea2 {
+        position: absolute;
+        top: -18px;
+        left: 50px;
+        width: 860px;
+        height: 100%;
+        display: none;
+        background: url(/images/waitingHerbalTea.gif) no-repeat;
+        background-size: contain;
+    }
+
+#inputbox {
+    font-family: 'Delius', cursive;
+    font-size: 20px;
+    top: 112px;
+    height: 170px;
+    width: 755px;
+    left: 90px;
+    position: absolute;
+    background-color: #ebccb7;
+    z-index: 110;
+}
+    
